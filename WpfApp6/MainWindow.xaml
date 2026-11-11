@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="750" Width="550"
+        Background="AliceBlue">
+    <Grid Margin="40">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="65"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Szakköri jelentkezés" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label Content="Diák neve:" Grid.Row="1" Grid.Column="0"/>
+        <TextBox x:Name="studentInput" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Szakkör:" Grid.Row="2" Grid.Column="0"/>
+        <ComboBox x:Name="clubComboBox" Grid.Row="2" Grid.Column="1">
+            <ComboBoxItem Content="Programozás"/>
+            <ComboBoxItem Content="Robotika"/>
+            <ComboBoxItem Content="Fotózás"/>
+            <ComboBoxItem Content="Grafika"/>
+            <ComboBoxItem Content="Sport"/>
+        </ComboBox>
+        <CheckBox Content="Elfogadom a szakköri szabályzatot" x:Name="rulesCheck" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label Content="A szabályzat elfogadva" x:Name="infoLabel" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button Content="Jelentkezés" x:Name="registerButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Label x:Name="statusLabel" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
